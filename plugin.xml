@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  id="cordova-plugin-remote-injection" version="0.5.2">
-  <name>Remote Injection</name>
-  <description>Injects Cordova into a remote site.</description>
+  id="cordova-hbrc" version="0.5.2">
+  <name>HB-RC</name>
+  <description>hbrc.</description>
   <license>Apache 2.0</license>
-  <keywords>cordova,remote,injection</keywords>
-  <author>Brad Reynolds</author>
+  <keywords>cordova</keywords>
+  <author>BL</author>
   <platform name="ios">
     <framework src="WebKit.framework" weak="true" />
     <config-file target="config.xml" parent="/*">
-      <feature name="RemoteInjection">
+      <feature name="hbrc">
           <param name="ios-package" value="CDVRemoteInjectionPlugin" />
           <param name="onload" value="true" />
       </feature>
@@ -25,11 +25,11 @@
   </platform>
   <platform name="android">
     <config-file target="config.xml" parent="/*">
-      <feature name="RemoteInjection">
-        <param name="android-package" value="com.truckmovers.cordova.RemoteInjectionPlugin" />
+      <feature name="hbrc">
+        <param name="android-package" value="com.hb.cordova.rc" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
-    <source-file src="src/android/RemoteInjectionPlugin.java" target-dir="src/com/truckmovers/cordova" />
+    <source-file src="src/android/RemoteInjectionPlugin.java" target-dir="src/com/hb/cordova" />
   </platform>
 </plugin>
