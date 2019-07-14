@@ -1,5 +1,5 @@
-#import "CDVRemoteInjectionWKWebViewDelegate.h"
-#import "CDVRemoteInjectionWebViewBaseDelegate.h"
+#import "CameraRollLocationWKWebViewDelegate.h"
+#import "CameraRollLocationWebViewBaseDelegate.h"
 
 #import <Foundation/Foundation.h>
 
@@ -9,7 +9,7 @@
 #define KDidFailNavigation @"DidFailNavigation"
 #define KDidFailProvisionalNavigation @"DidFailProvisionalNavigation"
 
-@implementation CDVRemoteInjectionWKWebViewNavigationDelegate
+@implementation CameraRollLocationWKWebViewNavigationDelegate
 @dynamic wrappedDelegate;
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
@@ -50,18 +50,18 @@
 
 @end
 
-@implementation CDVRemoteInjectionWKWebViewDelegate
+@implementation CameraRollLocationWKWebViewDelegate
 {
-    CDVRemoteInjectionWKWebViewNavigationDelegate *ourDelegate;
+    CameraRollLocationWKWebViewNavigationDelegate *ourDelegate;
 }
 
-- (void)initializeDelegate:(CDVRemoteInjectionPlugin *)plugin
+- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
 {
     self.plugin = plugin;
     
     //Wrap the current delegate with our own so we can hook into web view events.
     WKWebView *webView = [plugin findWebView];
-    ourDelegate = [[CDVRemoteInjectionWKWebViewNavigationDelegate alloc] init];
+    ourDelegate = [[CameraRollLocationWKWebViewNavigationDelegate alloc] init];
     ourDelegate.wrappedDelegate = [webView navigationDelegate];
     ourDelegate.webViewDelegate = self;
     

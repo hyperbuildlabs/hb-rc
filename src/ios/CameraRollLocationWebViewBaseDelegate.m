@@ -1,17 +1,17 @@
 #import <Foundation/Foundation.h>
 
-#import "CDVRemoteInjection.h"
-#import "CDVRemoteInjectionWebViewBaseDelegate.h"
+#import "CameraRollLocation.h"
+#import "CameraRollLocationWebViewBaseDelegate.h"
 
 /*
  Objective-C wonkiness to create a property that can be accessed
  by subclasses but not on the exported public interface.
  */
-@interface CDVRemoteInjectionWebViewBaseDelegate ()
-@property (readwrite, weak) CDVRemoteInjectionPlugin *plugin;
+@interface CameraRollLocationWebViewBaseDelegate ()
+@property (readwrite, weak) CameraRollLocationPlugin *plugin;
 @end
 
-@interface CDVRemoteInjectionWebViewBaseDelegate ()
+@interface CameraRollLocationWebViewBaseDelegate ()
 @end
 
 @implementation WrappedDelegateProxy
@@ -32,7 +32,7 @@
 }
 @end
 
-@implementation CDVRemoteInjectionWebViewBaseDelegate
+@implementation CameraRollLocationWebViewBaseDelegate
 {
     /*
      Last time a request was made to load the web view.  Can be NULL.
@@ -50,7 +50,7 @@
     BOOL userRequestedReload;
 }
 
-- (void)initializeDelegate:(CDVRemoteInjectionPlugin *)plugin
+- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
 {
   // TODO To placate the compiler.
 }

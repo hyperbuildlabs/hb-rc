@@ -1,9 +1,9 @@
 {
-  "name": "hb-rc",
-  "version": "0.1.1",
-  "description": "Rc.",
+  "name": "cordova-camera-roll-location",
+  "version": "0.2.1",
+  "description": "",
   "cordova": {
-    "id": "hb-rc",
+    "id": "cordova-camera-roll-location",
     "platforms": [
       "android",
       "ios"
@@ -18,6 +18,6 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "BL",
+  "author": "TG",
   "license": "Apache-2.0"
 }

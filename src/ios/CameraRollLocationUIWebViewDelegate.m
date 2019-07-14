@@ -1,14 +1,14 @@
 //
-//  CDVRemoteInjection.m
+//  CameraRollLocation.m
 //
 
 #import <Foundation/Foundation.h>
 
-#import "CDVRemoteInjectionUIWebViewDelegate.h"
-#import "CDVRemoteInjectionWebViewBaseDelegate.h"
+#import "CameraRollLocationUIWebViewDelegate.h"
+#import "CameraRollLocationWebViewBaseDelegate.h"
 
 
-@implementation CDVRemoteInjectionUIWebViewNotificationDelegate
+@implementation CameraRollLocationUIWebViewNotificationDelegate
 @dynamic wrappedDelegate;
 
 - (void)webViewDidStartLoad:(UIWebView*)webView
@@ -39,18 +39,18 @@
 }
 @end
 
-@implementation CDVRemoteInjectionUIWebViewDelegate
+@implementation CameraRollLocationUIWebViewDelegate
 {
-    CDVRemoteInjectionUIWebViewNotificationDelegate *notificationDelegate;
+    CameraRollLocationUIWebViewNotificationDelegate *notificationDelegate;
 }
 
-- (void)initializeDelegate:(CDVRemoteInjectionPlugin *)plugin
+- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
 {
     self.plugin = plugin;
 
     // Wrap the current delegate with our own so we can hook into web view events.
     UIWebView *uiWebView = [plugin findWebView];
-    notificationDelegate = [[CDVRemoteInjectionUIWebViewNotificationDelegate alloc] init];
+    notificationDelegate = [[CameraRollLocationUIWebViewNotificationDelegate alloc] init];
     notificationDelegate.wrappedDelegate = [uiWebView delegate];
     notificationDelegate.webViewDelegate = self;
     [uiWebView setDelegate:notificationDelegate];

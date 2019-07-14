@@ -1,10 +1,10 @@
 //
-//  CDVRemoteInjection.h
+//  CameraRollLocation.h
 //
 
 #import <Cordova/CDVPlugin.h>
 
-@interface CDVRemoteInjectionPlugin : CDVPlugin
+@interface CameraRollLocationPlugin : CDVPlugin
 @property (readonly) NSArray *injectFirstFiles;
 /*
 From CRIPageLoadPromptInterval preference.  Wait period in seconds before prompting the
@@ -21,6 +21,6 @@ is set to 0.
 - (id) findWebView;
 @end
 
-@protocol CDVRemoteInjectionWebViewDelegate <NSObject>
-- (void) initializeDelegate:(CDVRemoteInjectionPlugin *)plugin;
+@protocol CameraRollLocationWebViewDelegate <NSObject>
+- (void) initializeDelegate:(CameraRollLocationPlugin *)plugin;
 @end

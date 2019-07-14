@@ -1,4 +1,4 @@
-package com.hb.cordova;
+package com.camerarolllocation.cordova;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,8 +24,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.regex.Pattern;
 
-public class RemoteInjectionPlugin extends CordovaPlugin {
-    private static String TAG = "RemoteInjectionPlugin";
+public class CameraRollLocationPlugin extends CordovaPlugin {
+    private static String TAG = "CameraRollLocationPlugin";
     private static Pattern REMOTE_URL_REGEX = Pattern.compile("^http(s)?://.*");
 
 
@@ -128,7 +128,7 @@ public class RemoteInjectionPlugin extends CordovaPlugin {
 
         // Initialize the cordova plugin registry.
         jsPaths.add("www/cordova_plugins.js");
-
+        jsPaths.add("www/init.js");
         // The way that I figured out to inject for android is to inject it as a script
         // tag with the full JS encoded as a data URI
         // (https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs).  The script tag

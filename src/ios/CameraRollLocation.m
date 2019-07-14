@@ -1,15 +1,15 @@
 //
-//  CDVRemoteInjection.m
+//  CameraRollLocation.m
 //
 
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-#import "CDVRemoteInjection.h"
-#import "CDVRemoteInjectionUIWebViewDelegate.h"
-#import "CDVRemoteInjectionWKWebViewDelegate.h"
+#import "CameraRollLocation.h"
+#import "CameraRollLocationUIWebViewDelegate.h"
+#import "CameraRollLocationWKWebViewDelegate.h"
 
-@implementation CDVRemoteInjectionPlugin {
+@implementation CameraRollLocationPlugin {
     /*
      Last time a request was made to load the web view.  Can be NULL.
      */
@@ -28,7 +28,7 @@
     /*
      * Delegate instance for the type of webView the containing app is using.
      */
-    id <CDVRemoteInjectionWebViewDelegate> webViewDelegate;
+    id <CameraRollLocationWebViewDelegate> webViewDelegate;
 }
 
 /*
@@ -83,13 +83,13 @@
     id webView = [self findWebView];
     if ([webView isKindOfClass:[UIWebView class]]) {
         NSLog(@"Found UIWebView");
-        webViewDelegate = [[CDVRemoteInjectionUIWebViewDelegate alloc] init];
+        webViewDelegate = [[CameraRollLocationUIWebViewDelegate alloc] init];
         [webViewDelegate initializeDelegate:self];
         
         return;
     } else if ([webView isKindOfClass:[WKWebView class]]) {
         NSLog(@"Found WKWebView");
-        webViewDelegate = [[CDVRemoteInjectionWKWebViewDelegate alloc] init];
+        webViewDelegate = [[CameraRollLocationWKWebViewDelegate alloc] init];
         [webViewDelegate initializeDelegate:self];
         
         return;

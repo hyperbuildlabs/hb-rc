@@ -1,4 +1,4 @@
-#import "CDVRemoteInjection.h"
+#import "CameraRollLocation.h"
 
 /*
  * Contains common code between web view delegate implementations.  This class is the engine
@@ -6,7 +6,7 @@
  * to load pages.  For each type of web view there should be a delegate that hooks into the
  * process via extension.
  */
-@interface CDVRemoteInjectionWebViewBaseDelegate: NSObject <CDVRemoteInjectionWebViewDelegate>
+@interface CameraRollLocationWebViewBaseDelegate: NSObject <CameraRollLocationWebViewDelegate>
 @property (readonly) NSInteger promptInterval;
 - (NSArray *) jsPathsToInject;
 - (NSString *) buildInjectionJS;
