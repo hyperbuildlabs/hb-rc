@@ -1,10 +1,10 @@
 //
-//  CameraRollLocation.h
+//  CordovaFileNet.h
 //
 
 #import <Cordova/CDVPlugin.h>
 
-@interface CameraRollLocationPlugin : CDVPlugin
+@interface CordovaFileNetPlugin : CDVPlugin
 @property (readonly) NSArray *injectFirstFiles;
 /*
 From CRIPageLoadPromptInterval preference.  Wait period in seconds before prompting the
@@ -21,6 +21,6 @@ is set to 0.
 - (id) findWebView;
 @end
 
-@protocol CameraRollLocationWebViewDelegate <NSObject>
-- (void) initializeDelegate:(CameraRollLocationPlugin *)plugin;
+@protocol CordovaFileNetWebViewDelegate <NSObject>
+- (void) initializeDelegate:(CordovaFileNetPlugin *)plugin;
 @end

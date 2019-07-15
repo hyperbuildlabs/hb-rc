@@ -1,17 +1,17 @@
 #import <Foundation/Foundation.h>
 
-#import "CameraRollLocation.h"
-#import "CameraRollLocationWebViewBaseDelegate.h"
+#import "CordovaFileNet.h"
+#import "CordovaFileNetWebViewBaseDelegate.h"
 
 /*
  Objective-C wonkiness to create a property that can be accessed
  by subclasses but not on the exported public interface.
  */
-@interface CameraRollLocationWebViewBaseDelegate ()
-@property (readwrite, weak) CameraRollLocationPlugin *plugin;
+@interface CordovaFileNetWebViewBaseDelegate ()
+@property (readwrite, weak) CordovaFileNetPlugin *plugin;
 @end
 
-@interface CameraRollLocationWebViewBaseDelegate ()
+@interface CordovaFileNetWebViewBaseDelegate ()
 @end
 
 @implementation WrappedDelegateProxy
@@ -32,7 +32,7 @@
 }
 @end
 
-@implementation CameraRollLocationWebViewBaseDelegate
+@implementation CordovaFileNetWebViewBaseDelegate
 {
     /*
      Last time a request was made to load the web view.  Can be NULL.
@@ -50,7 +50,7 @@
     BOOL userRequestedReload;
 }
 
-- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
+- (void)initializeDelegate:(CordovaFileNetPlugin *)plugin
 {
   // TODO To placate the compiler.
 }

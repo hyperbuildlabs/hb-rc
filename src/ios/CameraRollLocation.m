@@ -1,15 +1,15 @@
 //
-//  CameraRollLocation.m
+//  CordovaFileNet.m
 //
 
 #import <Foundation/Foundation.h>
 #import <WebKit/WebKit.h>
 
-#import "CameraRollLocation.h"
-#import "CameraRollLocationUIWebViewDelegate.h"
-#import "CameraRollLocationWKWebViewDelegate.h"
+#import "CordovaFileNet.h"
+#import "CordovaFileNetUIWebViewDelegate.h"
+#import "CordovaFileNetWKWebViewDelegate.h"
 
-@implementation CameraRollLocationPlugin {
+@implementation CordovaFileNetPlugin {
     /*
      Last time a request was made to load the web view.  Can be NULL.
      */
@@ -28,7 +28,7 @@
     /*
      * Delegate instance for the type of webView the containing app is using.
      */
-    id <CameraRollLocationWebViewDelegate> webViewDelegate;
+    id <CordovaFileNetWebViewDelegate> webViewDelegate;
 }
 
 /*
@@ -83,13 +83,13 @@
     id webView = [self findWebView];
     if ([webView isKindOfClass:[UIWebView class]]) {
         NSLog(@"Found UIWebView");
-        webViewDelegate = [[CameraRollLocationUIWebViewDelegate alloc] init];
+        webViewDelegate = [[CordovaFileNetUIWebViewDelegate alloc] init];
         [webViewDelegate initializeDelegate:self];
         
         return;
     } else if ([webView isKindOfClass:[WKWebView class]]) {
         NSLog(@"Found WKWebView");
-        webViewDelegate = [[CameraRollLocationWKWebViewDelegate alloc] init];
+        webViewDelegate = [[CordovaFileNetWKWebViewDelegate alloc] init];
         [webViewDelegate initializeDelegate:self];
         
         return;

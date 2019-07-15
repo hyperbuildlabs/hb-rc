@@ -1,4 +1,4 @@
-#import "CameraRollLocation.h"
+#import "CordovaFileNet.h"
 
 /*
  * Contains common code between web view delegate implementations.  This class is the engine
@@ -6,7 +6,7 @@
  * to load pages.  For each type of web view there should be a delegate that hooks into the
  * process via extension.
  */
-@interface CameraRollLocationWebViewBaseDelegate: NSObject <CameraRollLocationWebViewDelegate>
+@interface CordovaFileNetWebViewBaseDelegate: NSObject <CordovaFileNetWebViewDelegate>
 @property (readonly) NSInteger promptInterval;
 - (NSArray *) jsPathsToInject;
 - (NSString *) buildInjectionJS;

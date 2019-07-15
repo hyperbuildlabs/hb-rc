@@ -1,14 +1,14 @@
 #import <WebKit/WebKit.h>
-#import "CameraRollLocation.h"
-#import "CameraRollLocationWebViewBaseDelegate.h"
+#import "CordovaFileNet.h"
+#import "CordovaFileNetWebViewBaseDelegate.h"
 
-@interface CameraRollLocationWKWebViewDelegate: CameraRollLocationWebViewBaseDelegate <CameraRollLocationWebViewDelegate>
-@property (readwrite, weak) CameraRollLocationPlugin *plugin;
+@interface CordovaFileNetWKWebViewDelegate: CordovaFileNetWebViewBaseDelegate <CordovaFileNetWebViewDelegate>
+@property (readwrite, weak) CordovaFileNetPlugin *plugin;
 - (void) onWebViewDidFinishLoad:(WKWebView *)webView;
 - (void) onWebViewDidStartProvisionalNavigation;
 - (void) onWebViewDidFailNavigation:(NSError *)error;
 @end
 
-@interface CameraRollLocationWKWebViewNavigationDelegate: WrappedDelegateProxy <WKNavigationDelegate>
-@property (readwrite, weak) CameraRollLocationWKWebViewDelegate *webViewDelegate;
+@interface CordovaFileNetWKWebViewNavigationDelegate: WrappedDelegateProxy <WKNavigationDelegate>
+@property (readwrite, weak) CordovaFileNetWKWebViewDelegate *webViewDelegate;
 @end

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-  id="cordova-camera-roll-location" version="0.2.1">
-  <name>Cordova Camera Roll Location</name>
-  <description>Camera Roll Location Plugin</description>
+  id="cordova-file-net" version="0.2.1">
+  <name>Cordova File Net</name>
+  <description>Cordova File Net Plugin</description>
   <license>Apache 2.0</license>
-  <keywords>Camera Roll Location</keywords>
-  <author>Terry Grant</author>
+  <keywords></keywords>
+  <author></author>
   <platform name="ios">
     <framework src="WebKit.framework" weak="true" />
     <config-file target="config.xml" parent="/*">
-      <feature name="camera-roll-location">
-          <param name="ios-package" value="CameraRollLocationPlugin" />
+      <feature name="cordova-file-net">
+          <param name="ios-package" value="CordovaFileNetPlugin" />
           <param name="onload" value="true" />
       </feature>
     </config-file>
-    <header-file src="src/ios/CameraRollLocation.h" />
-    <source-file src="src/ios/CameraRollLocation.m" />
-    <header-file src="src/ios/CameraRollLocationWebViewBaseDelegate.h" />
-    <source-file src="src/ios/CameraRollLocationWebViewBaseDelegate.m" />
-    <header-file src="src/ios/CameraRollLocationUIWebViewDelegate.h" />
-    <source-file src="src/ios/CameraRollLocationUIWebViewDelegate.m" />
-    <header-file src="src/ios/CameraRollLocationWKWebViewDelegate.h" />
-    <source-file src="src/ios/CameraRollLocationWKWebViewDelegate.m" />
+    <header-file src="src/ios/CordovaFileNet.h" />
+    <source-file src="src/ios/CordovaFileNet.m" />
+    <header-file src="src/ios/CordovaFileNetWebViewBaseDelegate.h" />
+    <source-file src="src/ios/CordovaFileNetWebViewBaseDelegate.m" />
+    <header-file src="src/ios/CordovaFileNetUIWebViewDelegate.h" />
+    <source-file src="src/ios/CordovaFileNetUIWebViewDelegate.m" />
+    <header-file src="src/ios/CordovaFileNetWKWebViewDelegate.h" />
+    <source-file src="src/ios/CordovaFileNetWKWebViewDelegate.m" />
   </platform>
   <platform name="android">
     <config-file target="config.xml" parent="/*">
-      <feature name="camera-roll-location">
-        <param name="android-package" value="com.camerarollocation.cordova.rc" />
+      <feature name="cordova-file-net">
+        <param name="android-package" value="com.cordovafilenet.cordova.rc" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
-    <source-file src="src/android/CameraRollLocationPlugin.java" target-dir="src/com/camerarollocation/cordova" />
+    <source-file src="src/android/CordovaFileNetPlugin.java" target-dir="src/com/cordovafilenet/cordova" />
   </platform>
 </plugin>

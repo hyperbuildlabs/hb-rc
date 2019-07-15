@@ -1,5 +1,5 @@
-#import "CameraRollLocationWKWebViewDelegate.h"
-#import "CameraRollLocationWebViewBaseDelegate.h"
+#import "CordovaFileNetWKWebViewDelegate.h"
+#import "CordovaFileNetWebViewBaseDelegate.h"
 
 #import <Foundation/Foundation.h>
 
@@ -9,7 +9,7 @@
 #define KDidFailNavigation @"DidFailNavigation"
 #define KDidFailProvisionalNavigation @"DidFailProvisionalNavigation"
 
-@implementation CameraRollLocationWKWebViewNavigationDelegate
+@implementation CordovaFileNetWKWebViewNavigationDelegate
 @dynamic wrappedDelegate;
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
@@ -50,18 +50,18 @@
 
 @end
 
-@implementation CameraRollLocationWKWebViewDelegate
+@implementation CordovaFileNetWKWebViewDelegate
 {
-    CameraRollLocationWKWebViewNavigationDelegate *ourDelegate;
+    CordovaFileNetWKWebViewNavigationDelegate *ourDelegate;
 }
 
-- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
+- (void)initializeDelegate:(CordovaFileNetPlugin *)plugin
 {
     self.plugin = plugin;
     
     //Wrap the current delegate with our own so we can hook into web view events.
     WKWebView *webView = [plugin findWebView];
-    ourDelegate = [[CameraRollLocationWKWebViewNavigationDelegate alloc] init];
+    ourDelegate = [[CordovaFileNetWKWebViewNavigationDelegate alloc] init];
     ourDelegate.wrappedDelegate = [webView navigationDelegate];
     ourDelegate.webViewDelegate = self;
     

@@ -1,14 +1,14 @@
 //
-//  CameraRollLocation.m
+//  CordovaFileNet.m
 //
 
 #import <Foundation/Foundation.h>
 
-#import "CameraRollLocationUIWebViewDelegate.h"
-#import "CameraRollLocationWebViewBaseDelegate.h"
+#import "CordovaFileNetUIWebViewDelegate.h"
+#import "CordovaFileNetWebViewBaseDelegate.h"
 
 
-@implementation CameraRollLocationUIWebViewNotificationDelegate
+@implementation CordovaFileNetUIWebViewNotificationDelegate
 @dynamic wrappedDelegate;
 
 - (void)webViewDidStartLoad:(UIWebView*)webView
@@ -39,18 +39,18 @@
 }
 @end
 
-@implementation CameraRollLocationUIWebViewDelegate
+@implementation CordovaFileNetUIWebViewDelegate
 {
-    CameraRollLocationUIWebViewNotificationDelegate *notificationDelegate;
+    CordovaFileNetUIWebViewNotificationDelegate *notificationDelegate;
 }
 
-- (void)initializeDelegate:(CameraRollLocationPlugin *)plugin
+- (void)initializeDelegate:(CordovaFileNetPlugin *)plugin
 {
     self.plugin = plugin;
 
     // Wrap the current delegate with our own so we can hook into web view events.
     UIWebView *uiWebView = [plugin findWebView];
-    notificationDelegate = [[CameraRollLocationUIWebViewNotificationDelegate alloc] init];
+    notificationDelegate = [[CordovaFileNetUIWebViewNotificationDelegate alloc] init];
     notificationDelegate.wrappedDelegate = [uiWebView delegate];
     notificationDelegate.webViewDelegate = self;
     [uiWebView setDelegate:notificationDelegate];

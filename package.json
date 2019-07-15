@@ -1,9 +1,9 @@
 {
-  "name": "cordova-camera-roll-location",
+  "name": "cordova-file-net",
   "version": "0.2.1",
   "description": "",
   "cordova": {
-    "id": "cordova-camera-roll-location",
+    "id": "cordova-file-net",
     "platforms": [
       "android",
       "ios"
@@ -18,6 +18,6 @@
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "TG",
+  "author": "",
   "license": "Apache-2.0"
 }

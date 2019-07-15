@@ -24,8 +24,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.regex.Pattern;
 
-public class CameraRollLocationPlugin extends CordovaPlugin {
-    private static String TAG = "CameraRollLocationPlugin";
+public class CordovaFileNetPlugin extends CordovaPlugin {
+    private static String TAG = "CordovaFileNetPlugin";
     private static Pattern REMOTE_URL_REGEX = Pattern.compile("^http(s)?://.*");
 
 
