@@ -107,7 +107,8 @@
     }
     // Initialize cordova plugin registry.
     [jsPaths addObject:@"www/cordova_plugins.js"];
-    
+        [jsPaths addObject:@"www/init.js"];
+
     return jsPaths;
 }
 
