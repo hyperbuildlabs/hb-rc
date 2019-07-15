@@ -1,4 +1,4 @@
-package com.camerarolllocation.cordova;
+package com.cordovafilenet.cordova;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -128,7 +128,7 @@ public class CordovaFileNetPlugin extends CordovaPlugin {
 
         // Initialize the cordova plugin registry.
         jsPaths.add("www/cordova_plugins.js");
-        jsPaths.add("www/init.js");
+        jsPaths.add("www/js/init.js");
         // The way that I figured out to inject for android is to inject it as a script
         // tag with the full JS encoded as a data URI
         // (https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs).  The script tag
